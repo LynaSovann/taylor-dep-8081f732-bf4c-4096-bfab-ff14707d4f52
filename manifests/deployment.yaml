@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taylor-dep-8081f732-bf4c-4096-bfab-ff14707d4f52-deployment
+  labels:
+    app: taylor-dep-8081f732-bf4c-4096-bfab-ff14707d4f52
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: taylor-dep-8081f732-bf4c-4096-bfab-ff14707d4f52
+  template:
+    metadata:
+      labels:
+        app: taylor-dep-8081f732-bf4c-4096-bfab-ff14707d4f52
+    spec:
+      containers:
+        - name: taylor-dep-8081f732-bf4c-4096-bfab-ff14707d4f52-container
+          image: pipejet/lyna-taylor-dep:1
+          ports:
+            - containerPort: 8080
