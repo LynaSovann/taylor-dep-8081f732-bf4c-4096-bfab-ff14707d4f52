@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: taylor-dep-8081f732-bf4c-4096-bfab-ff14707d4f52-ingress
+  namespace: taylor-dep-8081f732-bf4c-4096-bfab-ff14707d4f52
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: manuth-leler.tinhlgkiddy.fun
+    http:
+      paths:
+      - path: /
+        pathType: Prefix  
+        backend:
+          service:
+            name: taylor-dep-8081f732-bf4c-4096-bfab-ff14707d4f52-service 
+            port:
+              number: 8089
